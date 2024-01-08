@@ -15,40 +15,40 @@ var completedTasksHolder = document.getElementById("completed-tasks"); //complet
 //New task list item
 var createNewTaskElement = function (taskString) {
   var listItem = document.createElement("li");
-  listItem.className = "task-item";
+  listItem.className = "section__task-item";
 
   //input (checkbox)
   var checkBox = document.createElement("input"); //checkbx
-  checkBox.className = "input-checkbox";
+  checkBox.className = "section__section__section__section__section__section__section__input-checkbox";
   //label
   var label = document.createElement("label"); //label
-  label.className = "task-input edit-label";
+  label.className = "section__task-input edit-label";
   //input (text)
   var editInput = document.createElement("input"); //text
-  editInput.className = "task-input input-text"
+  editInput.className = "section__task-input input-text"
   //button.edit
   var editButton = document.createElement("button"); //edit button
-  editButton.className = "button edit-btn";
+  editButton.className = "section__button edit-btn";
 
   //button.delete
   var deleteButton = document.createElement("button"); //delete button
-  deleteButton.className = "button delete-btn";
+  deleteButton.className = "section__button delete-btn";
   var deleteButtonImg = document.createElement("img"); //delete button image
-  deleteButtonImg.className = "delete-image";
+  deleteButtonImg.className = "section__delete-image";
 
   label.innerText = taskString;
-  label.className = "task-input";
+  label.className = "section__task-input";
 
   //Each elements, needs appending
   checkBox.type = "checkbox";
   editInput.type = "text";
-  editInput.className="task-input input-text";  
+  editInput.className="section__task-input input-text";  
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className = "button edit-btn";
+  editButton.className = "section__button edit-btn";
   deleteButtonImg.alt = 'button';
 
-  deleteButton.className = "button delete-btn";
+  deleteButton.className = "section__button delete-btn";
   deleteButtonImg.src = "./remove.svg";
   deleteButton.appendChild(deleteButtonImg);
 

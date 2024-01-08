@@ -4,35 +4,35 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
-.image-matrix {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.matrix-image {
+.header__matrix-image {
   width: 100%;
 }
-.more-inf {
+.header__more-info {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
-  .image-matrix { 
+  .header { 
     text-align: center;
   }
 }
-.main-element {
+.main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.task-input {
+.section__task-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.wrapper {
   display: flex;
 }
 ul {
@@ -45,10 +45,10 @@ h3 {
   list-style: none;
 }
 input,
-.button{
+.section__button{
   outline: none;
 }
-.button {
+.section__button {
   background: none;
   border: 0px;
   color: #888;
@@ -57,7 +57,7 @@ input,
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-.button:hover {
+.section__button:hover {
   color: #3a3a3a;
 }
 /* Heading */
@@ -89,7 +89,7 @@ h3,
 }
 
 /* New Task */
-.task-title {
+.section__title {
   display: block;
   margin: 0 0 20px;
 }
@@ -111,7 +111,7 @@ h3,
   vertical-align: middle;
 }
 
-.task-item > .input-checkbox {
+.task-item > .section__input-checkbox {
   margin: 0 10px;
 }
 .task-item > label {
@@ -120,15 +120,15 @@ h3,
   font-size: 18px;
   width: 226px;
 }
-.task-item > .task-input {
+.task-item > .section__task-input {
   width: 226px;
 }
-.delete-image {
+.section__delete-image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete-image:hover {
+.section__delete-image:hover {
   transform: rotateZ(0);
 }
 
