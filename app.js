@@ -15,19 +15,26 @@ var completedTasksHolder = document.getElementById("completed-tasks"); //complet
 //New task list item
 var createNewTaskElement = function (taskString) {
   var listItem = document.createElement("li");
+  listItem.className = "task-item";
 
   //input (checkbox)
   var checkBox = document.createElement("input"); //checkbx
+  checkBox.className = "input-checkbox";
   //label
   var label = document.createElement("label"); //label
+  label.className = "task-input edit-label";
   //input (text)
   var editInput = document.createElement("input"); //text
+  editInput.className = "task-input input-text"
   //button.edit
   var editButton = document.createElement("button"); //edit button
+  editButton.className = "button edit-btn";
 
   //button.delete
   var deleteButton = document.createElement("button"); //delete button
+  deleteButton.className = "button delete-btn";
   var deleteButtonImg = document.createElement("img"); //delete button image
+  deleteButtonImg.className = "delete-image";
 
   label.innerText = taskString;
   label.className = "task-input";
@@ -35,13 +42,13 @@ var createNewTaskElement = function (taskString) {
   //Each elements, needs appending
   checkBox.type = "checkbox";
   editInput.type = "text";
-  editInput.className = "task-input";
+  editInput.className="task-input input-text";  
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className = "edit-btn";
+  editButton.className = "button edit-btn";
   deleteButtonImg.alt = 'button';
 
-  deleteButton.className = "delete-btn";
+  deleteButton.className = "button delete-btn";
   deleteButtonImg.src = "./remove.svg";
   deleteButton.appendChild(deleteButtonImg);
 
@@ -75,8 +82,9 @@ var editTask = function () {
 
   var listItem = this.parentNode;
 
-  var editInput = listItem.querySelector("input[type=text]");
+  var editInput=listItem.querySelector('.input-text');
   var label = listItem.querySelector("label");
+  label.classList.add('edit-label');
   var editBtn = listItem.querySelector(".edit-btn");
   var containsClass = listItem.classList.contains("edit-mode");
   //If class of the parent is .edit-mode
