@@ -15,11 +15,11 @@ var completedTasksHolder = document.getElementById("completed-tasks"); //complet
 //New task list item
 var createNewTaskElement = function (taskString) {
   var listItem = document.createElement("li");
-  listItem.className = "section__task-item";
+  listItem.className = "task-item";
 
   //input (checkbox)
   var checkBox = document.createElement("input"); //checkbx
-  checkBox.className = "section__section__section__section__section__section__section__input-checkbox";
+  checkBox.className = "section__input-checkbox";
   //label
   var label = document.createElement("label"); //label
   label.className = "section__task-input edit-label";
@@ -118,6 +118,8 @@ var taskCompleted = function () {
 
   //Append the task list item to the #completed-tasks
   var listItem = this.parentNode;
+  var completeTask = listItem.querySelector('.edit-label');
+  completeTask.classList.add('completed-task');
   completedTasksHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 };
@@ -128,6 +130,8 @@ var taskIncomplete = function () {
   //When the checkbox is unchecked
   //Append the task list item to the #incomplete-tasks.
   var listItem = this.parentNode;
+  var completeTask = listItem.querySelector('.edit-label');
+  completeTask.classList.remove('completed-task');
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, taskCompleted);
 };
